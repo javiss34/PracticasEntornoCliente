@@ -1,9 +1,7 @@
 "use strict";
 
 //ejercicio1
-/* function calcularaImc(masa,altura){
-    return (masa/(altura*altura));
-};
+import { calcularaImc } from './ejercicio1.js';
 
 let masaMarcos = 80;
 let alturaMarcos = 1.90;
@@ -20,15 +18,12 @@ if(imcMarcos<=imcJuan){
 
 console.log(imcMarcos);
 console.log(imcJuan);
-console.log(`Tiene Marcos un IMC mayor que el de Juan : ${imcMarcosMayorJuan}`); */
+console.log(`Tiene Marcos un IMC mayor que el de Juan : ${imcMarcosMayorJuan}`);
 
 
 
 //ejercicio2
-/* function puntMedia(partido1,partido2,partido3){
-    return (partido1+partido2+partido3)/3;
-
-};
+import {puntMedia} from "./ejercicio2.js";
 let puntMediaEquipoJuan = puntMedia(89,120,103);
 let puntMediaEquipoMiguel = puntMedia(116,94,123);
 let puntMediaEquipoMaria = puntMedia(97,134,105);
@@ -45,30 +40,17 @@ function mejorMedia(puntMediaEquipoJuan,puntMediaEquipoMiguel){
     }
 }
 
-mejorMedia(puntMediaEquipoJuan,puntMediaEquipoMiguel); */
+mejorMedia(puntMediaEquipoJuan,puntMediaEquipoMiguel);
 
 
 
 //ejercicio3
-/* function funcion(num1,num2){
-    for (let i = 0; i < num1; i++) {
-        console.log(num2);
-        num2*=2;
-    }
-
-}
-funcion(4,6); */
+import {funcion} from "./ejercicio3.js";
+funcion(4,6);
 
 
 //ejercicio4
-function calcularPrecio(nombre="Producto genérico",precio=100,impuesto=21){
-    if(isNaN(precio) || isNaN(impuesto)){
-        console.log("Error");
-    }else{
-        console.log(`Producto: ${nombre} \nPrecio final: ${precio+(precio*(impuesto/100))}€`)
-    }
-
-}
+import {calcularPrecio} from "./ejercicio4.js";
 calcularPrecio("PS5", "rt", 21);
 calcularPrecio("Coche",20000,21);
 
