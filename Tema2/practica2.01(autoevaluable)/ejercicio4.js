@@ -1,5 +1,5 @@
 "use strict"
-function calcularPrecio(nombre="Producto genérico",precio=100,impuesto=21){
+export function calcularPrecio(nombre="Producto genérico",precio=100,impuesto=21){
     if(isNaN(precio) || isNaN(impuesto)){
         console.log("Error");
     }else{
@@ -7,4 +7,3 @@ function calcularPrecio(nombre="Producto genérico",precio=100,impuesto=21){
     }
 
 }
-export {calcularPrecio};
