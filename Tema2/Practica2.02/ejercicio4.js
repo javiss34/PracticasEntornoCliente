@@ -19,6 +19,6 @@ export function potencia(base,exponente){
         i++;
     }
 
-    console.log(`${base}^${exponente}=${resultado}`);
+    console.log(`Potencia -> ${base}^${exponente}=${resultado}`);
 
 }

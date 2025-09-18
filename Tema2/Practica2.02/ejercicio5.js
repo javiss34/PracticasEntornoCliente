@@ -13,7 +13,7 @@ export function calcularMedia(){
     for (let i = 0; i < arguments.length; i++) {
         let num = arguments[i];
 
-        if(typeof num === "number" && Number.isInteger(num) && num>=0){
+        if(Number.isInteger(num) && num>=0){
             suma+=num;
             contador++;
         }else{

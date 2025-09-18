@@ -10,12 +10,12 @@ export function esPar(num){
 export function esPositivo(num){
     return num>0;//Considero que el 0 es negativo
 }
-
 export function esprimo(num){
+    //Ni los negativos ni el 1 son primos
     if(num<2){
         return false;
     }
-
+    //si el numero da de resto 0 en cualquier división entres este y su raiz cuadrada no sera primo
     for (let i = 2; i <= Math.sqrt(num); i++) {
         if(num % i === 0){
             return false;
