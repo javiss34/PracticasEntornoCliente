@@ -1,15 +1,16 @@
 "use strict";
 
-export function mostrarMes(entero){
-    if(isNaN(entero)){
+export function mostrarMes(num){
+    if(!Number.isInteger(num)){
         console.log("Error. No has introducido un número");
+        return;
     }
     let mes;
-    switch (entero) {
+    switch (num) {
         case 1:
             mes= "Enero";
             break;
-        case 2:entero
+        case 2:
             mes= "Febrero";
             break;
         case 3:
@@ -45,8 +46,8 @@ export function mostrarMes(entero){
     
         default:
             console.log("ERROR. Tu número no esta en el rango 1-12")
-            break;
+            return;
     }
-    return console.log(`El mes número ${entero} es ${mes}`);
+    return console.log(`El mes número ${num} es ${mes}`);
 
 }

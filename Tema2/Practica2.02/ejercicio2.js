@@ -1,23 +1,36 @@
 "use strict"
-export function comprobarNumero(num){
-    if(isNaN(num)){
-        console.log("No has introducido un número");
+export function esNumero(num){
+        return !isNaN(num);
+}
+
+export function esPar(num){
+    return num%2===0;
+}
+
+export function esPositivo(num){
+    return num>0;//Considero que el 0 es negativo
+}
+
+export function esprimo(num){
+    if(num<2){
+        return false;
     }
-    //Para ver si es par
-    let esPar;
-    if(num%2==0){
-        esPar="es par";
-    }else{
-        esPar="es impar";
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if(num % i === 0){
+            return false;
+        }
     }
-    //Para ver si es positivo
-    let esPositivo;
-    if(num>0){
-        esPositivo="es positivo";
-    }else if(num<0){
-        esPositivo="es negativo"
-    }else{
-        esPositivo="es el 0"
+    return true;
+}
+
+export function analisisNumerico(num){
+    if(!esNumero(num)){
+        console.log("Error.No has introducido un número");
+        return;
     }
-    return console.log(`El número ${num} ${esPar} y ${esPositivo}`);
+    console.log(`El número es: `);
+    console.log(`${esPar(num) ? "par" : "impar"}`);
+    console.log(`${esPositivo(num) ? "positivo" : "negativo"}`);
+    console.log(`${esprimo(num) ? "primo" : "no primo"}`);
 }

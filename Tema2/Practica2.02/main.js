@@ -2,12 +2,24 @@
 
 //Ejercicio1
 import { mostrarMes } from "./ejercicio1.js";
-mostrarMes(12);
+mostrarMes(6);
 
 //ejercicio2
-import { comprobarNumero } from "./ejercicio2.js";
-comprobarNumero(24);
+import { analisisNumerico } from "./ejercicio2.js";
+analisisNumerico(35);
 
 //ejercicio3
 import { multiplosTres } from "./ejercicio3.js";
-multiplosTres(50);
+multiplosTres(3);
+
+//ejercicio4
+import { potencia } from "./ejercicio4.js";
+potencia(2,2);
+
+//ejercicio5
+import { calcularMedia } from "./ejercicio5.js";
+calcularMedia(10,20);
+
+//ejercicio6
+import { calculadora } from "./ejercicio6.js";
+calculadora(5,5,"/");
