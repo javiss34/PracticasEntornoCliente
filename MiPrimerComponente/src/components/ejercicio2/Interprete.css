@@ -1,0 +1,13 @@
+.interprete_alerta{
+    border: 5px solid gray;
+    padding: 10px;
+    display: flex;
+}
+
+.foto{
+    width: 150px;
+    height: 200px;
+    padding: 10px;
+}
+
+
