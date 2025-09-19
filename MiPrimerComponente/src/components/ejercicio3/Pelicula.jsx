@@ -8,7 +8,9 @@ const Pelicula = ({titulo,direccion,cartela,children,elenco}) => {
       <h2 className='direccion'>{direccion}</h2>
       <img src={cartela} alt={`Foto de ${titulo}`}></img>
       <p>{children}</p>
-      
+      <div>
+        <p className='elenco'>{elenco}</p>
+      </div>
     </div>
   )
 }
