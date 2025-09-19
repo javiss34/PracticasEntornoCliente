@@ -1,7 +1,8 @@
 .interprete_alerta{
-    border: 3px solid grey;
-    padding: 10px;
+    border: 5px solid salmon;
     display: flex;
+    background-color: salmon;
+    margin: 100px;
 }
 
 .foto{
@@ -10,4 +11,7 @@
     padding: 10px;
 }
 
+.texto{
+    font-family:'Times New Roman', Times, serif;
+}
 
