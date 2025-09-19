@@ -1,15 +1,15 @@
 import React from 'react';
 import './Pelicula.css';
 
-const Pelicula = ({titulo,direccion,cartela,children}) => {
+const Pelicula = (props) => {
   return (
     <div className='pelicula_alerta'>
       <div className='titulo_direccion'>
-        <h1 className='titulo'>{titulo}</h1>
-        <h2 className='direccion'>{direccion}</h2>
+        <h1 className='titulo'>{props.titulo}</h1>
+        <h2 className='direccion'>{props.direccion}</h2>
       </div>
-      <img src={cartela} alt={`Foto de ${titulo}`} className='cartela'></img>
-      <p className='resumen'>{children}</p>
+      <img src={props.cartela} alt={`Foto de ${props.titulo}`} className='cartela'></img>
+      <p className='resumen'>{props.children}</p>
     </div>
   )
 }
