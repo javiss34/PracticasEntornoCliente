@@ -15,5 +15,7 @@ import {calculadoraPropina} from "./ejercicio3.js";
 calculadoraPropina([120,340,506]);
 
 //ejercicio4
-import { generarArray } from "./ejercicio4.js";
+import { generarArray,imprimirArray,sumaInversaArrays } from "./ejercicio4.js";
 generarArray(4);
+imprimirArray([2,5,6]);
+sumaInversaArrays([2,3],[3,4]);
