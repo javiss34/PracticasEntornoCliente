@@ -16,7 +16,7 @@ function App() {
         <h2>Mi primer componente</h2>
 
         <Interprete nombre="Pablo Chiapella" foto="https://album.mediaset.es/cimg/1000001/2017/02/14/p1.jpg">
-          Pablo Chiapella Cámara (Albacete, 1 de diciembre de 1976),​​ apodado Chape, es un actor y presentador español con raíces italianas. ​ Es conocido principalmente por el papel de Amador Rivas en la serie de televisión La que se avecina.
+          Pablo Chiapella Cámara (Albacete, 1 de diciembre de 1976),apodado Chape, es un actor y presentador español con raíces italianas. ​ Es conocido principalmente por el papel de Amador Rivas en la serie de televisión La que se avecina.
         </Interprete>
 
         <Pelicula titulo='La que se avecina' direccion='Alberto Caballero y Laura Caballero' cartela='https://upload.wikimedia.org/wikipedia/commons/0/09/LaQueSeAvecina.jpg'>
