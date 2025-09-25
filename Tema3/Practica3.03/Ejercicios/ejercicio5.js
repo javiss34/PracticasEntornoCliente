@@ -5,7 +5,7 @@ export const mostrarObjeto = (objeto) => {
     for (const clave in objeto) {
         if(typeof objeto[clave] !== "function"){
             if(Array.isArray(objeto[clave])){
-                console.log(`${clave}: ${objeto[clave]}`);
+                console.log(`${clave}: ${JSON.stringify(objeto[clave])}`);
             } else if(typeof objeto[clave] === "object"){
                 console.log(`${clave}:`);
                 for (const subclave in objeto[clave]) {
