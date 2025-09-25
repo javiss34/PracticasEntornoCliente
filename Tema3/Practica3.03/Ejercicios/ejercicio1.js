@@ -1,12 +1,16 @@
 "use strict";
 
-export const generarCurso = (nombre,año,desc) => ({
+export const generarCurso = (nombre,anio,desc) => ({
         nombre,
-        año,
+        anio,
         desc,
         alumnado: [],
         matricular: function(discente){
-            this.alumnado.push(discente);
+            if(this.alumnado.includes(discente)){
+                console.log(`El discente ${discente.nombre} ya está matriculado.`)
+            }else{
+                this.alumnado.push(discente);
+            }
         }
 });
 

@@ -18,16 +18,16 @@ export let discente = {
         return this.aficiones.join(", ");
     },
     imprimirInforme: function(){
-        console.log(`_____INFORME_____`);
+        console.log(`\n_____INFORME_____`);
         for (const clave in this) {
             if(typeof this[clave] !== "function"){
-                if(typeof this[clave] === "object" && !Array.isArray(this[clave])){ //He tenido que validar que no sea un array, sino se metia en objeto.
+                if(Array.isArray(this[clave])){
+                    console.log(`${clave}: ${this[clave].join(", ")}`);
+                }else if(typeof this[clave] === "object"){ 
                     console.log((`${clave}:`));
                     for (const subclave in this[clave]) {
                         console.log((`${subclave}: ${this[clave][subclave]}`));
                     }
-                }else if(Array.isArray(this[clave])){
-                    console.log(`${clave}: ${this[clave].join(", ")}`);
                 }else{
                     console.log((`${clave}: ${this[clave]}`));
                 }

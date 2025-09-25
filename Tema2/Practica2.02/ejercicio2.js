@@ -10,7 +10,7 @@ export function esPar(num){
 export function esPositivo(num){
     return num>0;//Considero que el 0 es negativo
 }
-export function esprimo(num){
+export function esPrimo(num){
     //Ni los negativos ni el 1 son primos
     if(num<2){
         return false;
