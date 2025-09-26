@@ -2,12 +2,17 @@
 
 //ejercicio1
 let array = ["Sergio","Pedri","Manuel","Abel","Carlos"];
-let array2 = [23,65,78,2,32];
-import { conversorMayuscula,ordenarAlfabeticamenteInvero,crearArrayObjeto,crear,duplicarArray } from "./Ejercicios/ejercicio1.js";
+import { conversorMayuscula,ordenarAlfabeticamenteInvero,crearArrayObjeto } from "./Ejercicios/ejercicio1.js";
 console.log(conversorMayuscula(array));
 
 console.log(ordenarAlfabeticamenteInvero(array));
 
 console.log(crearArrayObjeto(array));
-console.log(crear(array));
-console.log(duplicarArray(array2));
+
+//ejercicio2
+import { crearArrayAleatorio,filtrarMayorQueCinco } from "./Ejercicios/ejercicio2.js";
+let array1=crearArrayAleatorio();
+let array2=crearArrayAleatorio();
+let array3=crearArrayAleatorio();
+
+console.log(filtrarMayorQueCinco(array1,array2,array3));

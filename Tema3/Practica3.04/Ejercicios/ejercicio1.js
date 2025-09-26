@@ -9,14 +9,5 @@ export const ordenarAlfabeticamenteInvero = (array) => {
 }
 
 export const crearArrayObjeto = (array) => {
-    let nuevoArray=[];
-    let id = 0;
-    for (const element of array) {
-        nuevoArray.push({id,element});
-        id++;
-    }
-    return nuevoArray;
-    
+    return array.map((nombre,id) => ({id,nombre}));//Pongo id,nombre entre llaves para que sea un objeto
 }
-
-export const crear = (array) => array.map((nombre,id)=>({id:id,nombre:nombre}));
