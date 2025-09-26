@@ -2,40 +2,45 @@
 
 export let discente = {
     id: 34,
-    nombre: "Javier",
+    nombre: "Javeir",
     apellidos: "Sánchez Solera",
-    aficiones: ["Futbol","Rugby"],
+    aficiones: ["Fútbol","Tenis"],
     notas: {
-        primera:7,
-        segunda:5,
+        primera: 7,
+        segunda: 5,
         tercera: 6
     },
+    //He decidido meter las funciones en el objeto discente.
     calcularMedia: function(){
-        let {primera,segunda,tercera} = this.notas;
+        let{primera,segunda,tercera} = this.notas;//He usado desestructuración.
         return (primera+segunda+tercera)/3;
     },
     imprimirAficiones: function(){
         return this.aficiones.join(", ");
     },
     imprimirInforme: function(){
-        console.log(`\n_____INFORME_____`);
-        for (const clave in this) {
-            if(typeof this[clave] !== "function"){
-                if(Array.isArray(this[clave])){
-                    console.log(`${clave}: ${this[clave].join(", ")}`);
-                }else if(typeof this[clave] === "object"){ 
-                    console.log((`${clave}:`));
-                    for (const subclave in this[clave]) {
-                        console.log((`${subclave}: ${this[clave][subclave]}`));
+        console.log(`_____INFORME DISCENTE_____`)
+        for (const clave in discente) {
+            //Si es una función no se muestra.
+            if(typeof discente[clave] !== "function"){
+                //Si es un objeto entra en este if.
+                if(typeof discente[clave] === "object"){
+                    //Como un array es un objeto pues valido si el objeto es un array para darle el formato join(", ").
+                    if(Array.isArray(discente[clave])){
+                        console.log(`${clave}: ${discente[clave].join(", ")}`);
+                    }else{
+                        //Si es un objeto hago otro forin para recorrer el interior del objeto y en este caso mostrar las notas.
+                        console.log(`${clave}: `)
+                        for (const subclave in discente[clave]) {
+                            console.log(`${subclave}: ${discente[clave][subclave]}`);
                     }
-                }else{
-                    console.log((`${clave}: ${this[clave]}`));
                 }
-            }  
-            
+                //Los demas tipos como números o strings los imprime con este formato por pantalla.
+                }else{
+                    console.log(`${clave}: ${discente[clave]}`);
+                }
+            }
         }
-        console.log(`Nota media: ${this.calcularMedia().toFixed(2)}`);
-
     }
 
-}
+};

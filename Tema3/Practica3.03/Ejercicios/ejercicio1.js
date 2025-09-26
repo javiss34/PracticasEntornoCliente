@@ -1,17 +1,14 @@
 "use strict";
 
-export const generarCurso = (nombre,anio,desc) => ({
+export const constructorObjetos = (nombre,año,descripcion) => {
+    return {
         nombre,
-        anio,
-        desc,
-        alumnado: [],
+        año,
+        descripcion,
+        alumnado:[],
         matricular: function(discente){
-            if(this.alumnado.includes(discente)){
-                console.log(`El discente ${discente.nombre} ya está matriculado.`)
-            }else{
-                this.alumnado.push(discente);
-            }
+            this.alumnado={...this.alumnado, discente};//Lo he hecho así para que se añade el discente a los alumnados que ya habían.
         }
-});
-
+    }
+}
 

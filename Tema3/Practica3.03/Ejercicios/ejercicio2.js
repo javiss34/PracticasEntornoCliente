@@ -1,15 +1,13 @@
 "use strict";
 
 export const informeCurso = (curso) => {
-    console.log(`\n_____Informe del curso_____`)
+    console.log(`_____INFORME CURSO_____`)
     for (const clave in curso) {
+        //Como he tenido que introducir la función matricular en el ejercicio1 he tenido que validar que no sea una función para no mostrarlapor pantalla.
         if(typeof curso[clave] !== "function"){
-            if(Array.isArray(curso[clave])){
-                console.log(`${clave}: ${curso[clave].join(", ")}`);
-            }else{
-                console.log(`${clave}: ${curso[clave]}`);
-            }
+        if(curso.hasOwnProperty(clave)){
+            console.log(`${clave}: ${curso[clave]}`);
         }
-        
+        }
     }
 }
