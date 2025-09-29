@@ -125,14 +125,15 @@ export const filtrarPorFaltaDatos = (usuarios) => {
   });
 }
 
-export const añadirApellidos = (usuarios) => {
+//Para estos dos últimos ejercicios he decidido añadir un parámetro de entrada nuevo a cada uno que sea un objeto con apellidos según el nombre o código según la dirección.
+export const añadirApellidos = (usuarios,apellidos) => {
   return usuarios.map(usuario => ({
     ...usuario, //Copia todo el objet usuario 
-    apellidos: "No indicado" //Añade la propiedad apellidos con "No indicado" como defecto.
+    apellidos: apellidos[usuario.nombre] || "No indicado" //Según el nombre tendra un apellido u otro, si no se le asigna ninguno será "No indicado".
   }));
 }
 
-export const añadirCodigoADireccion = (usuarios) => {
+export const añadirCodigoADireccion = (usuarios,codigo) => {
   //En este caso tenemos que ir copiando parte por parte del objeto ya que tenemos que añadir codigo en el objeto dirección.
   return usuarios.map(usuario => ({
     ...usuario,
@@ -140,7 +141,7 @@ export const añadirCodigoADireccion = (usuarios) => {
       ...usuario.contacto,
       direccion: {
         ...usuario.contacto.direccion,
-        codigo: "00000"
+        codigo: codigo[usuario.contacto.direccion.localidad] || "00000" //Según la localidad tendra un código u otro, si no se le asigna ninguno será "00000".
       }
     }
   }));
